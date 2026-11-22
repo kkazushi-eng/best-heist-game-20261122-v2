@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>The Midnight Vault — a stealth heist game</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #07080f radial-gradient(ellipse at 50% 20%, #141830 0%, #07080f 65%);
+    color: #e8eaf2;
+    font-family: Georgia, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+  }
+  h1 {
+    margin: 0 0 4px;
+    font-size: 26px;
+    letter-spacing: 4px;
+    color: #ffd94d;
+    text-transform: uppercase;
+  }
+  .tagline {
+    margin: 0 0 14px;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #8b93a7;
+    letter-spacing: 1px;
+  }
+  #game {
+    width: min(960px, 96vw);
+    height: auto;
+    border: 2px solid #c9a227;
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(201, 162, 39, 0.25), 0 18px 50px rgba(0, 0, 0, 0.6);
+    background: #171b2e;
+    cursor: crosshair;
+    display: block;
+  }
+  .help {
+    margin: 14px 0 0;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #8b93a7;
+    text-align: center;
+    line-height: 1.7;
+  }
+  .help b { color: #e8eaf2; }
+  .help .gold { color: #ffd94d; }
+</style>
+</head>
+<body>
+  <h1>The Midnight Vault</h1>
+  <p class="tagline">A top-down stealth heist &mdash; three rooms, one getaway</p>
+  <canvas id="game" width="960" height="640"></canvas>
+  <p class="help">
+    <b>WASD / Arrows</b> move &nbsp;&middot;&nbsp; <b>Shift</b> sneak &nbsp;&middot;&nbsp;
+    <b>1</b> throw coin &nbsp;&middot;&nbsp; <b>2</b> smoke bomb &nbsp;&middot;&nbsp; <b>3</b> EMP<br>
+    Steal the <span class="gold">★ main loot</span> to unlock the exit. Cameras feed the alarm, lasers trip it &mdash; at 100, the museum locks down.
+  </p>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
